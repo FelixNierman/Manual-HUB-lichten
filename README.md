@@ -266,11 +266,37 @@ pixels.show();  </code></p>
 
 <h2>Chapter 6. Connecting the infrared sensor</h2>
 
-<p></p>
+<p>Step 1. Connect the PIR Motion sensor to your NodeMCU.</p>
 
+<ul>
+  <li>Black wire to GND</li>
+  <li>Red wire to 3v3</li>
+  <li>White wire keep unplugged</li>
+  <li>Yellow wire D2</li>
+</ul>
 
+<p>Step 2. Check if the motion sensor works. Make a new sketch and paste the following code:</p>
 
-
+<p><code>#define PIR_MOTION_SENSOR 2<br>
+<br>
+void setup() {<br>
+  Serial.begin(9600);<br>
+  pinMode(PIR_MOTION_SENSOR, INPUT);<br>
+}<br>
+<br>
+void loop() {<br>
+  int motion = digitalRead(PIR_MOTION_SENSOR);<br>
+  Serial.print("PIR Sensor State: ");<br>
+  Serial.println(motion);<br>
+<br>
+  if (motion == HIGH) {<br>
+    Serial.println("Motion detected!");<br>
+  } else {<br>
+    Serial.println("No motion.");<br>
+  }<br>
+  <br>
+  delay(1000);<br>
+}</code></p>
 
 
 
