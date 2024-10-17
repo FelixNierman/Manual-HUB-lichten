@@ -156,12 +156,40 @@ NTPClient timeClient(ntpUDP, "pool.ntp.org", 3600, 60000); // Sync with NTP serv
 int lightPin = 5;  // GPIO pin connected to the light<br>
 unsigned long sunsetTime = 0; // To store the sunset time in Unix timestamp format</code>
 
+![Frame 20](https://github.com/user-attachments/assets/28fea7bd-236b-424f-80c0-ce6689c03509)
 
-<p>Step 2. Paste the following code like in the highlighted box below.</p>
+<p>Step 5. Paste the following code in the <code>void setup</code> as shown below.</p>
 
-<code>unsigned long sunrise = doc["sys"]["sunrise"];<br>
+<p><code>  timeClient.begin();  // Start NTP client</code></p>
+
+![image](https://github.com/user-attachments/assets/3107e77f-6078-4260-bd85-b8fa9ab72b1e)
+
+<p>Step 6. Paste the following code in the <code>void loop</code> as shown below.</p>
+
+<p><code>timeClient.update();  // Update current time from NTP server<br>
+<br>
+unsigned long currentTime = timeClient.getEpochTime();<br>
+if (currentTime > sunsetTime && sunsetTime != 0) {<br>
+  // It's after sunset, turn on the light<br>
+  digitalWrite(lightPin, HIGH);<br>
+  Serial.println("Turning on the light, it's after sunset.");<br>
+} else {<br>
+  // It's before sunset or data not available yet<br>
+  digitalWrite(lightPin, LOW);<br>
+  Serial.println("Light is off.");<br>
+}<br>
+<br>
+delay(60000);  // Check once every minute</code></p>
+
+![image](https://github.com/user-attachments/assets/5301bd72-f17b-4c36-8027-d2a43df2f7d5)
+
+<p>Step 7. Paste the follow code in the <code>void parseJson</code> as shown below.</p>
+
+<p><code>  // Get sunrise and sunset<br>
+unsigned long sunrise = doc["sys"]["sunrise"];<br>
 unsigned long sunset = doc["sys"]["sunset"];<br>
 <br>
+// Convert Unix timestamp to human-readable format<br>
 time_t rawtime = sunrise;<br>
 struct tm * timeinfo = localtime(&rawtime);<br>
 Serial.print("Sunrise: ");<br>
@@ -170,15 +198,19 @@ Serial.println(asctime(timeinfo));<br>
 rawtime = sunset;<br>
 timeinfo = localtime(&rawtime);<br>
 Serial.print("Sunset: ");<br>
-Serial.println(asctime(timeinfo));</code>
+Serial.println(asctime(timeinfo));<br>
+<br>
+sunsetTime = doc["sys"]["sunset"];<br>
+Serial.print("Sunset time (Unix): ");<br>
+Serial.println(sunsetTime);</code></p>
 
-![Frame 17](https://github.com/user-attachments/assets/c206c82e-44b5-4ade-be34-c0d4bf3bbd84)
+![Frame 23](https://github.com/user-attachments/assets/054e0cc0-6ab0-4d17-b7f2-c3578fe16a4a)
 
+<h2>Chapter 5. Connecting the LED-strip</h2>
 
+<p>Step 1. Install the library "Adafruit NeoPixel" by Adafruit.</p>
 
-
-
-
+![image](https://github.com/user-attachments/assets/4c328844-34ac-4107-91bc-36ebbb95772c)
 
 
 
