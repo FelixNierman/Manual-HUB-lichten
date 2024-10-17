@@ -212,8 +212,24 @@ Serial.println(sunsetTime);</code></p>
 
 ![image](https://github.com/user-attachments/assets/4c328844-34ac-4107-91bc-36ebbb95772c)
 
+<p>Step 2. Paste the following code below the other libraries you have included as shown below.</p>
 
+<p><code>#include <Adafruit_NeoPixel.h><br>
+#define PIN D1<br>
+#define NUMPIXELS 15<br>
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);</code></p>
 
+![image](https://github.com/user-attachments/assets/d8b062bb-30f2-4268-a40f-54c040134c9d)
+
+<p>Step 3. Connect your LED-strip to your NodeMCU.</p>
+
+<ul>
+  <li>The black wire connects to GND on the NodeMCU</li>
+  <li>The red wire connects to 3v3 on the NodeMCU</li>
+  <li>The yellow wire connects to D1 on your NodeMCU</li>
+</ul>
+
+![Frame 25](https://github.com/user-attachments/assets/e66610d3-0c8c-4cc4-a6ed-b14fdd3b9003)
 
 
 
