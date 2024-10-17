@@ -185,7 +185,7 @@ delay(60000);  // Check once every minute</code></p>
 
 <p>Step 7. Paste the follow code in the <code>void parseJson</code> as shown below.</p>
 
-<p><code>  // Get sunrise and sunset<br>
+<p><code>// Get sunrise and sunset<br>
 unsigned long sunrise = doc["sys"]["sunrise"];<br>
 unsigned long sunset = doc["sys"]["sunset"];<br>
 <br>
@@ -230,6 +230,27 @@ Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);</code></p>
 </ul>
 
 ![Frame 25](https://github.com/user-attachments/assets/e66610d3-0c8c-4cc4-a6ed-b14fdd3b9003)
+
+<p>Step 4. Paste the following code in the <code>void setup</code> as shown below.</p>
+
+<p><code>pixels.begin();<br>
+  pixels.show();</code></p>
+
+![image](https://github.com/user-attachments/assets/2af58f8f-d62c-420c-a6df-c843b0b67966)
+
+<p>Step 5. Paste the following code in your <code>void loop</code> to check if your LED-strip works, as shown below.</p>
+
+<p><code>pixels.setPixelColor(0, pixels.Color(255, 0, 0));<br>
+pixels.show();</code></p>
+
+![image](https://github.com/user-attachments/assets/79dc9614-9057-449d-a53f-89f358778565)
+
+
+
+
+
+
+
 
 
 
