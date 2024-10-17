@@ -135,8 +135,22 @@
 
 ![Frame 16](https://github.com/user-attachments/assets/7c2fd10c-d6b8-46e6-a646-54436840a70f)
 
-https://api.openweathermap.org/data/3.0/onecall?lat=52.377956&lon=4.897070&appid=7f0e2797537e629126df88defeeb9250
+<p>Step 2. Paste the following code like in the highlighted box below.</p>
 
+<code>unsigned long sunrise = doc["sys"]["sunrise"];<br>
+unsigned long sunset = doc["sys"]["sunset"];<br>
+<br>
+time_t rawtime = sunrise;<br>
+struct tm * timeinfo = localtime(&rawtime);<br>
+Serial.print("Sunrise: ");<br>
+Serial.println(asctime(timeinfo));<br>
+<br>
+rawtime = sunset;<br>
+timeinfo = localtime(&rawtime);<br>
+Serial.print("Sunset: ");<br>
+Serial.println(asctime(timeinfo));</code>
+
+![Frame 17](https://github.com/user-attachments/assets/c206c82e-44b5-4ade-be34-c0d4bf3bbd84)
 
 
 
