@@ -75,7 +75,7 @@
 
 <p>If you see “Hello world” in the Serial Monitor, you have successfully connected your NodeMCU.</p>
 
-<h2>Chapter 3. Weather API</h2>
+<h2>Chapter 3. Connecting the Weather API</h2>
 
 <p>In this chapter we will connect the ModeMCU to a weather API. The weather API will give us a real time forecast.</p>
 
@@ -109,5 +109,24 @@
 <p>Step 7. Copy your API key.</p>
 
 ![Frame 14](https://github.com/user-attachments/assets/4a1b1f80-f1e9-4309-8437-18e00ff43d05)
+
+<p>Step 8. Replace "YOUR API KEY" with your API key.</p>
+
+![image](https://github.com/user-attachments/assets/6c7d2051-e078-4690-8b85-bf924a986440)
+
+<p>Step 9. Upload the code to your NodeMCU.</p>
+
+<p>Step 10. Open the Serial Monitor to check if the weather API was successfully connected. You should see the following in your Serial Monitor.</p>
+
+![image](https://github.com/user-attachments/assets/7e447227-a69e-4407-ad54-d8a48728024c)
+
+<p>If you see the following error message, disconnect your NodeMCU from the micro-usb cable and plug it back in. It should reconnect.</p>
+
+![image](https://github.com/user-attachments/assets/b72b7122-26c6-47a2-a978-11acaf236295)
+
+<p>You now have the weather API successfully connected.</p>
+
+<h2>Chapter 4. Editting the Code</h2>
+
 
 
