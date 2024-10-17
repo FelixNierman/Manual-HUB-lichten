@@ -129,7 +129,7 @@
 
 <h2>Chapter 4. Editting the Code</h2>
 
-<p>Step 1. Change <code>"forecast"</code> in the following code to <code>"weather"</code>.</p>
+<p>Step 1. Change <code>"forecast"</code> in the <code>void makehttpsRequest</code> to <code>"weather"</code>.</p>
 
 ![Frame 15](https://github.com/user-attachments/assets/71a0ca37-c464-4635-a18e-b2e19e6b3da7)
 
