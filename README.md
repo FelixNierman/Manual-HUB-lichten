@@ -19,7 +19,8 @@
 
 <p>Open a New Sketch (CTRL + N) if you don’t already have one open like below.</p>
 
-![Frame 3](https://github.com/user-attachments/assets/f3fa753f-b91f-4c49-9019-99dfb1ce74ec)
+![image](https://github.com/user-attachments/assets/5d2c1cf8-3266-4cdf-b419-dbbd9c515e04)
+
 
 <p>Now we can finally start coding. </p>
 
@@ -29,13 +30,15 @@
 
 <p>Step 2. Plug in the Micro-USB into your NoteMCU and plug the USB-A in your computer.</p>
 
-![Frame 4](https://github.com/user-attachments/assets/3790abe6-427e-4b20-9c27-90a1d8390d22)
+![Frame 3](https://github.com/user-attachments/assets/f3fa753f-b91f-4c49-9019-99dfb1ce74ec)
 
 <p>Step 3. Select the right board. Go to Tools > Board:”...” > esp8266 > NodeMCU 1.0 (ESP-12E Module)</p>
 
-![Frame 5](https://github.com/user-attachments/assets/dd14f4eb-3377-4ac5-afc1-7e3d7f24549c)
+![Frame 4](https://github.com/user-attachments/assets/3790abe6-427e-4b20-9c27-90a1d8390d22)
 
 <p>Step 4. Select the right port. This is where you plugged in the USB-A. Go to Tools > Port: “...” > COM 7. Go to Step 5 if you don’t know which port you need to select. Go to Step 7 if you did this step successfully.</p>
+
+![Frame 5](https://github.com/user-attachments/assets/dd14f4eb-3377-4ac5-afc1-7e3d7f24549c)
 
 ![Frame 6](https://github.com/user-attachments/assets/bac98bfe-e76a-4a9f-b482-b8930d5b0580)
 
