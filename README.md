@@ -238,18 +238,20 @@ Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);</code></p>
 
 ![image](https://github.com/user-attachments/assets/2af58f8f-d62c-420c-a6df-c843b0b67966)
 
-<p>Step 5. Paste the following code in your <code>void loop</code> to check if your LED-strip works, as shown below.</p>
+<p>Step 5. Remove <code>digitalWrite(lightPin, HIGH);</code> and paste the following code in your <code>void loop</code> in the else statement to check if your LED-strip works, as shown below.</p>
 
 <p><code>pixels.setPixelColor(0, pixels.Color(255, 0, 0));<br>
 pixels.show();</code></p>
 
 ![image](https://github.com/user-attachments/assets/79dc9614-9057-449d-a53f-89f358778565)
 
+<p>If the sun is up, your light should turn red lik ethe picture below.</p>
 
+![image](https://github.com/user-attachments/assets/8c0b9778-87e0-4e96-b717-9e3eb07018a5)
 
+<p>If it doesn't light up it might be because the sun has already set (paste the code in the if statement instead)</p>
 
-
-
+<p>Step 6. Change the rgb value to (0, 0, 0) in the else statement to turn off the LED-strip and paste the code from the previous step in the if statement, but change the rgb value to (255, 255, 255) to turn on the LED-strip.</p>
 
 
 
