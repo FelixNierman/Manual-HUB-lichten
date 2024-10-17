@@ -69,7 +69,7 @@
 
 ![image](https://github.com/user-attachments/assets/15ad2f9c-e36a-4e58-91b9-c657e54123ba)
 
-<p>Step 2. Upload the code by pressing the arrow in the top right (like Step 7 from Chapter 1). And open the Serial Monitor (highlighted red in the top right) when it is done uploading. Look at the output it gives (in the yellow highlighted box)</p>
+<p>Step 2. First, upload the code by pressing the arrow in the top left (like Step 7 from Chapter 1). Secondly, open the Serial Monitor (highlighted red in the top right) when it is done uploading. Look at the output it gives (in the yellow highlighted box)</p>
 
 ![Frame 10](https://github.com/user-attachments/assets/194f90ed-9d8c-4206-83ed-72aa3ac256d4)
 
@@ -92,5 +92,22 @@
 
 <p>Step 2. Copy the code from <a href="https://gist.github.com/icecream4all/7e9db0333f44192a6071eb73efe23329#file-nodemcu-weather-ino">This website</a> and paste it in a New Sketch (CTRL + N)</p>
 
+<p>Step 3. Start a hotspot on you phone</p>
+
+<p>Step 4. Paste the name of your hotspot and the password in the code. Replace "YOUR PHONE HOTSPOT HERE" with the name of your hotspot and replace "YOUT HOTSPOT PASSWORD" with the password of your hotspot</p>
+
+![image](https://github.com/user-attachments/assets/ac6c7cb7-6318-4a16-b70a-aa921d204372)
+
+<p>Step 5. Replace "Amsterdam,NL" with the name of your city.</p>
+
+![image](https://github.com/user-attachments/assets/64d19f71-fc5c-43f5-9c2c-6c8e433a702a)
+
+<p>Step 6. Go back to the open weather map website, click on your account and go to "Your API keys".</p>
+
+![Frame 13](https://github.com/user-attachments/assets/5a6ae82d-0db4-4b23-8144-6d8fac61a3f5)
+
+<p>Step 7. Copy your API key.</p>
+
+![Frame 14](https://github.com/user-attachments/assets/4a1b1f80-f1e9-4309-8437-18e00ff43d05)
 
 
