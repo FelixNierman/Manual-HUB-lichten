@@ -8,6 +8,7 @@
   <li>An infrared sensor (PIR Motion Sensor)</li>
   <li>A connector with 4 wires</li>
 </ul>
+
 ![Frame 1](https://github.com/user-attachments/assets/ca937173-8e01-4891-af04-8f267f77c3d3)
 
 <p>You will also need to download a program called Arduino IDE. Follow this link to download the program: https://www.arduino.cc/en/software</p>
