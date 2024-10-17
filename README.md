@@ -7,12 +7,21 @@
   <li>An LED-strip</li>
   <li>An infrared sensor (PIR Motion Sensor)</li>
   <li>A connector with 4 wires</li>
-
 </ul>
+![Frame 1](https://github.com/user-attachments/assets/ca937173-8e01-4891-af04-8f267f77c3d3)
 
+<p>You will also need to download a program called Arduino IDE. Follow this link to download the program: https://www.arduino.cc/en/software</p>
 
 ![Frame 2](https://github.com/user-attachments/assets/408ccd70-5f77-4748-8d7d-8ece24d88e43)
+
+<p>Click on Windows Win 10 and newer, 64 bits highlighted in red. Download the program and run it.</p>
+
+<p>Open a New Sketch (CTRL + N) if you don’t already have one open like below.</p>
+
 ![Frame 3](https://github.com/user-attachments/assets/f3fa753f-b91f-4c49-9019-99dfb1ce74ec)
+
+<p>Now we can finally start coding. </p>
+
 ![Frame 4](https://github.com/user-attachments/assets/3790abe6-427e-4b20-9c27-90a1d8390d22)
 ![Frame 5](https://github.com/user-attachments/assets/dd14f4eb-3377-4ac5-afc1-7e3d7f24549c)
 ![Frame 6](https://github.com/user-attachments/assets/bac98bfe-e76a-4a9f-b482-b8930d5b0580)
@@ -22,4 +31,3 @@
 ![Frame 10](https://github.com/user-attachments/assets/194f90ed-9d8c-4206-83ed-72aa3ac256d4)
 ![Frame 12](https://github.com/user-attachments/assets/a0f30b3c-8c8d-4809-a284-6abe34539d0b)
 ![Frame 11](https://github.com/user-attachments/assets/aace5bcc-1b9c-48f5-9a18-2cabdcebb81c)
-![Frame 1](https://github.com/user-attachments/assets/ca937173-8e01-4891-af04-8f267f77c3d3)
