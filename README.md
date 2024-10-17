@@ -164,7 +164,7 @@ unsigned long sunsetTime = 0; // To store the sunset time in Unix timestamp form
 
 ![image](https://github.com/user-attachments/assets/3107e77f-6078-4260-bd85-b8fa9ab72b1e)
 
-<p>Step 6. Paste the following code in the <code>void loop</code> as shown below.</p>
+<p>Step 6. Paste the following code in the <code>void loop</code>. This will compare the current time with the time of sunset and give feedback by turning on a light (we dont yet have connected) and by giving us a Serial.print.</p>
 
 <p><code>timeClient.update();  // Update current time from NTP server<br>
 <br>
@@ -181,9 +181,11 @@ if (currentTime > sunsetTime && sunsetTime != 0) {<br>
 <br>
 delay(60000);  // Check once every minute</code></p>
 
+<p>Like this:</p>
+
 ![image](https://github.com/user-attachments/assets/5301bd72-f17b-4c36-8027-d2a43df2f7d5)
 
-<p>Step 7. Paste the follow code in the <code>void parseJson</code> as shown below.</p>
+<p>Step 7. Paste the follow code in the <code>void parseJson</code>. This code takes the data from the weather API and turns it into something we can read and use in our code.</p>
 
 <p><code>// Get sunrise and sunset<br>
 unsigned long sunrise = doc["sys"]["sunrise"];<br>
@@ -204,7 +206,9 @@ sunsetTime = doc["sys"]["sunset"];<br>
 Serial.print("Sunset time (Unix): ");<br>
 Serial.println(sunsetTime);</code></p>
 
-![Frame 23](https://github.com/user-attachments/assets/054e0cc0-6ab0-4d17-b7f2-c3578fe16a4a)
+<p>If you look in the Serial Monitor, you can see the time the sun will set and come up again.</p>
+
+![image](https://github.com/user-attachments/assets/ff2faf62-72cf-4895-9c4e-e8f9e8500494)
 
 <h2>Chapter 5. Connecting the LED-strip</h2>
 
@@ -231,21 +235,21 @@ Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);</code></p>
 
 ![Frame 25](https://github.com/user-attachments/assets/e66610d3-0c8c-4cc4-a6ed-b14fdd3b9003)
 
-<p>Step 4. Paste the following code in the <code>void setup</code> as shown below.</p>
+<p>Step 4. Paste the following code in the <code>void setup</code> as shown below. This will enables the LED-strip, but doesnt turn on the lights.</p>
 
 <p><code>pixels.begin();<br>
   pixels.show();</code></p>
 
 ![image](https://github.com/user-attachments/assets/2af58f8f-d62c-420c-a6df-c843b0b67966)
 
-<p>Step 5. Remove <code>digitalWrite(lightPin, HIGH);</code> and paste the following code in your <code>void loop</code> in the else statement to check if your LED-strip works, as shown below.</p>
+<p>Step 5. Remove <code>digitalWrite(lightPin, HIGH);</code> and paste the following code in your <code>void loop</code> in the else statement. Upload the code to check if your LED-strip works, as shown below.</p>
 
 <p><code>pixels.setPixelColor(0, pixels.Color(255, 0, 0));<br>
 pixels.show();</code></p>
 
 ![image](https://github.com/user-attachments/assets/79dc9614-9057-449d-a53f-89f358778565)
 
-<p>If the sun is up, your light should turn red lik ethe picture below.</p>
+<p>If the sun is up, your light should turn red like the picture below.</p>
 
 ![image](https://github.com/user-attachments/assets/8c0b9778-87e0-4e96-b717-9e3eb07018a5)
 
@@ -277,7 +281,7 @@ pixels.show();  </code></p>
 
 <p>Step 2. Check if the motion sensor works. Make a new sketch and paste the following code:</p>
 
-<p><code>#define PIR_MOTION_SENSOR 2<br>
+<p><code>#define PIR_MOTION_SENSOR D2<br>
 <br>
 void setup() {<br>
   Serial.begin(9600);<br>
@@ -305,7 +309,6 @@ void loop() {<br>
 <ul>
   <li>Check if all your wires are connected correctly!</li>
   <li>Check if you call upon the second pin correctly: #define PIR_MOTION_SENSOR D2. If you use 2, instead of D2, it might not work.</li>
-  <li></li>
 </ul>
 
 <p>If the Serial Monitor also gives "No motion" you have successfully connected the motion sensor.</p>
@@ -314,7 +317,7 @@ void loop() {<br>
 
 <p>Now that we know the motion sensor works, we need to use it in our code.</p>
 
-<p>Step 1. Add the following code as shown below.</p>
+<p>Step 1. Add the following code as shown below. This will allow the NodeMCU to recognise the motion sensor and also lower the sensitivity (this is to ensure it isn't always on high alert).</p>
 
 <p><code>#define PIR_MOTION_SENSOR D2<br>
 int pirState = LOW;  // Start with no motion detected<br>
@@ -329,7 +332,7 @@ const long debounceDelay = 2000;  // 2-second delay for debouncing</code></p>
 
 ![image](https://github.com/user-attachments/assets/5f3dcbbd-d20b-4131-bee8-039aa7f9cc7a)
 
-<p>Step 3. Take the code relating to the sunset and lights out of the loop and put them in a void of their own like below.</p>
+<p>Step 3. Take the code relating to the sunset and lights out of the loop and put them in a void of their own. Give this new void the name DayNight.</p>
 
 <p>Before:</p>
 
@@ -339,29 +342,18 @@ const long debounceDelay = 2000;  // 2-second delay for debouncing</code></p>
 
 ![image](https://github.com/user-attachments/assets/926d27b5-d9d9-45e7-9a3f-563183358c1a)
 
-<p>Step 4. Create a new void for deteccting motion. When motion is detected, call on the DayNight function like below.</p>
+<p>Step 4. Create a new void for detecting motion. When motion is detected, call on the DayNight function like below.</p>
 
 ![image](https://github.com/user-attachments/assets/59f9dcd4-0a3a-47ad-8379-d80e430b46d1)
 
 <p>Now you have successfully made a HUB that detects if its dark out, turns on the lights accordingly, but only when movement is detected.</p>
 
+<h2>Tips</h2>
 
+<p>If you are checking if a line of code works by using the Serial Monitor, but it updates too fast. Try the <code>delay(60000); This will give it a delay of one second, you can lower or higher this.</code></p>
 
+<p>If you are unsure if one of your peripherals works or not, make a New Sketch and test it there. This will save you a lot of cleaning up your code and give you a better insight of where the problem might lie.</p>
 
+<p>If you ask ChatGPT to help you with coding, give him all your code, explain what you want and ask him to apply it in your code. The last part is very important if you are unsure of how the code works, otherwise you have to add it to your code yourself</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p>Always, always, always save your code. It's a real bummer to code for an hour and lose everything because you didnt hit save.</p>
