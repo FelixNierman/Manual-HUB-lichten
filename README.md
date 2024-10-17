@@ -62,8 +62,9 @@
 
 <p>Step 1. Copy the following code and paste it in the void Setup.</p>
 
-  <p>Serial.begin(9600);</p>
-  <p>Serial.println("Hello world");</p>
+  <code>Serial.begin(9600);</code>
+  <br>
+  <code>Serial.println("Hello world");</code>
 
 <p>Like this:</p>
 
@@ -94,11 +95,11 @@
 
 <p>Step 3. Start a hotspot on you phone</p>
 
-<p>Step 4. Paste the name of your hotspot and the password in the code. Replace "YOUR PHONE HOTSPOT HERE" with the name of your hotspot and replace "YOUT HOTSPOT PASSWORD" with the password of your hotspot</p>
+<p>Step 4. Paste the name of your hotspot and the password in the code. Replace <code>"YOUR PHONE HOTSPOT HERE"</code> with the name of your hotspot and replace <code>"YOUT HOTSPOT PASSWORD"</code> with the password of your hotspot</p>
 
 ![image](https://github.com/user-attachments/assets/ac6c7cb7-6318-4a16-b70a-aa921d204372)
 
-<p>Step 5. Replace "Amsterdam,NL" with the name of your city.</p>
+<p>Step 5. Replace <code>"Amsterdam,NL"</code> with the name of your city.</p>
 
 ![image](https://github.com/user-attachments/assets/64d19f71-fc5c-43f5-9c2c-6c8e433a702a)
 
@@ -110,7 +111,7 @@
 
 ![Frame 14](https://github.com/user-attachments/assets/4a1b1f80-f1e9-4309-8437-18e00ff43d05)
 
-<p>Step 8. Replace "YOUR API KEY" with your API key.</p>
+<p>Step 8. Replace <code>"YOUR API KEY"</code> with your API key.</p>
 
 ![image](https://github.com/user-attachments/assets/6c7d2051-e078-4690-8b85-bf924a986440)
 
@@ -127,6 +128,27 @@
 <p>You now have the weather API successfully connected.</p>
 
 <h2>Chapter 4. Editting the Code</h2>
+
+<p>Step 1. Change <code>"forecast"</code> in the following code to <code>"weather"</code>.</p>
+
+![Frame 15](https://github.com/user-attachments/assets/71a0ca37-c464-4635-a18e-b2e19e6b3da7)
+
+![Frame 16](https://github.com/user-attachments/assets/7c2fd10c-d6b8-46e6-a646-54436840a70f)
+
+https://api.openweathermap.org/data/3.0/onecall?lat=52.377956&lon=4.897070&appid=7f0e2797537e629126df88defeeb9250
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
