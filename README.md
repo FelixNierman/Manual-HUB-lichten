@@ -69,14 +69,28 @@
 
 ![image](https://github.com/user-attachments/assets/15ad2f9c-e36a-4e58-91b9-c657e54123ba)
 
+<p>Step 2. Upload the code by pressing the arrow in the top right (like Step 7 from Chapter 1). And open the Serial Monitor (highlighted red in the top right) when it is done uploading. Look at the output it gives (in the yellow highlighted box)</p>
 
 ![Frame 10](https://github.com/user-attachments/assets/194f90ed-9d8c-4206-83ed-72aa3ac256d4)
 
+<p>If you see “Hello world” in the Serial Monitor, you have successfully connected your NodeMCU.</p>
+
+<h2>Chapter 3. Weather API</h2>
+
+<p>In this chapter we will connect the ModeMCU to a weather API. The weather API will give us a real time forecast.</p>
+
+<p>Step 1. Make an account for <a href="https://openweathermap.org">Open Weather Map</a> Use the sign in button on the top right, highlighted red below.</p>
+
+
 ![Frame 12](https://github.com/user-attachments/assets/a0f30b3c-8c8d-4809-a284-6abe34539d0b)
 
-
+<p>Make a new account by using the button highlighted red below.</p>
 
 ![Frame 11](https://github.com/user-attachments/assets/aace5bcc-1b9c-48f5-9a18-2cabdcebb81c)
+
+<p>Fill in your information in the form and create your account.</p>
+
+<p>Step 2. Copy the code from <a href="https://gist.github.com/icecream4all/7e9db0333f44192a6071eb73efe23329#file-nodemcu-weather-ino">This website</a> and paste it in a New Sketch (CTRL + N)</p>
 
 
 
