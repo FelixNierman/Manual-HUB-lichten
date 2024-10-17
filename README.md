@@ -357,3 +357,11 @@ const long debounceDelay = 2000;  // 2-second delay for debouncing</code></p>
 <p>If you ask ChatGPT to help you with coding, give him all your code, explain what you want and ask him to apply it in your code. The last part is very important if you are unsure of how the code works, otherwise you have to add it to your code yourself</p>
 
 <p>Always, always, always save your code. It's a real bummer to code for an hour and lose everything because you didnt hit save.</p>
+
+<h2>Common mistakes made</h2>
+
+<p>When you are struggling with a new sensor like the Motion Sensor, look the product up. The website <a href="https://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/">Seeedstudio</a>shows you basic code to test the sensor and more information.</p>
+
+<p>If something hasnt been working, dont always assume its your code. It is very easy to plug in a sensor wrong, like I did.</p>
+
+<p>If you want to check if your lights turn when the sun is down by changing location, keep in mind that the current time doesnt change. This might cause you to think your code doesnt work, it does.</p>
