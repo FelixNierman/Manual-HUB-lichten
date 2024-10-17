@@ -253,6 +253,30 @@ pixels.show();</code></p>
 
 <p>Step 6. Change the rgb value to (0, 0, 0) in the else statement to turn off the LED-strip and paste the code from the previous step in the if statement, but change the rgb value to (255, 255, 255) to turn on the LED-strip.</p>
 
+<p><code>pixels.setPixelColor(0, pixels.Color(255, 255, 255));<br>
+pixels.show();  </code></p>
+
+![image](https://github.com/user-attachments/assets/858430ae-80ba-462e-933c-f5a0bd267e79)
+
+<p>Step 7. Test if everything works. If you are following along during the day, there is a way to check if it also works at night. To do this you need to change <code>nameOfCity</code> to a city on the other side of the world.</p>
+
+<p>Because it is daytime in Amsterdam at the moment of writing this, I used Tokyo Japan to check if it works. You can use any city by typing the name in English and using the Country code. This is a two letter code you can find on <a href="https://www.iso.org/obp/ui/#search">this website</a>.</p>
+
+![image](https://github.com/user-attachments/assets/9d702e0b-974c-43a9-93f7-523672484ea7)
+
+<h2>Chapter 6. Connecting the infrared sensor</h2>
+
+<p></p>
+
+
+
+
+
+
+
+
+
+
 
 
 
