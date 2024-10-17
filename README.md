@@ -135,6 +135,28 @@
 
 ![Frame 16](https://github.com/user-attachments/assets/7c2fd10c-d6b8-46e6-a646-54436840a70f)
 
+<p>Step 2. Install the library NTPClient by Fabrice Weinberg.</p>
+
+![image](https://github.com/user-attachments/assets/bda00420-9498-43b7-9d3c-26f06c0ae359)
+
+<p>Step 3. Paste the following code in the top of your file to include the newly installed library.</p>
+
+<code>#include <NTPClient.h><br>
+#include <WiFiUdp.h></code>
+
+<p>Like this:</p>
+
+![image](https://github.com/user-attachments/assets/11f5bdc9-e9a2-44e7-8134-ef19410b8d1c)
+
+<p>Step 4. Paste the following code a little bit below the other code you just added like in the picture below.</p>
+
+<code>WiFiUDP ntpUDP;<br>
+NTPClient timeClient(ntpUDP, "pool.ntp.org", 3600, 60000); // Sync with NTP server every minute<br>
+<br>
+int lightPin = 5;  // GPIO pin connected to the light<br>
+unsigned long sunsetTime = 0; // To store the sunset time in Unix timestamp format</code>
+
+
 <p>Step 2. Paste the following code like in the highlighted box below.</p>
 
 <code>unsigned long sunrise = doc["sys"]["sunrise"];<br>
