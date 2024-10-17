@@ -298,6 +298,62 @@ void loop() {<br>
   delay(1000);<br>
 }</code></p>
 
+<p>Step 3. Upload the code and take a look at the Serial Monitor.</p>
+
+<p>If the Serial Monitor keeps giving you a "Motion detected!" it might be because of the following reasons.</p>
+
+<ul>
+  <li>Check if all your wires are connected correctly!</li>
+  <li>Check if you call upon the second pin correctly: #define PIR_MOTION_SENSOR D2. If you use 2, instead of D2, it might not work.</li>
+  <li></li>
+</ul>
+
+<p>If the Serial Monitor also gives "No motion" you have successfully connected the motion sensor.</p>
+
+<h2>Chapter 7. Integrating the motion sensor into your code</h2>
+
+<p>Now that we know the motion sensor works, we need to use it in our code.</p>
+
+<p>Step 1. Add the following code as shown below.</p>
+
+<p><code>#define PIR_MOTION_SENSOR D2<br>
+int pirState = LOW;  // Start with no motion detected<br>
+long lastDetectionTime = 0;<br>
+const long debounceDelay = 2000;  // 2-second delay for debouncing</code></p>
+
+![image](https://github.com/user-attachments/assets/89f14e40-d5eb-4694-8137-d807af5eba8e)
+
+<p>Step 2. Add the following code to your void setup like shown below.</p>
+
+<p><code>pinMode(PIR_MOTION_SENSOR, INPUT);</code></p>
+
+![image](https://github.com/user-attachments/assets/5f3dcbbd-d20b-4131-bee8-039aa7f9cc7a)
+
+<p>Step 3. Take the code relating to the sunset and lights out of the loop and put them in a void of their own like below.</p>
+
+<p>Before:</p>
+
+![image](https://github.com/user-attachments/assets/ca5a6ffe-ef8f-4d7a-9e53-a915948d9966)
+
+<p>After:</p>
+
+![image](https://github.com/user-attachments/assets/926d27b5-d9d9-45e7-9a3f-563183358c1a)
+
+<p>Step 4. Create a new void for deteccting motion. When motion is detected, call on the DayNight function like below.</p>
+
+![image](https://github.com/user-attachments/assets/59f9dcd4-0a3a-47ad-8379-d80e430b46d1)
+
+<p>Now you have successfully made a HUB that detects if its dark out, turns on the lights accordingly, but only when movement is detected.</p>
+
+
+
+
+
+
+
+
+
+
 
 
 
